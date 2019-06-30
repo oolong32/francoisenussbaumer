@@ -4,3 +4,7 @@
 .DS_Store
 .swp
 /uploads
+gulpfile.js
+node_modules/
+package-lock.json
+package.json

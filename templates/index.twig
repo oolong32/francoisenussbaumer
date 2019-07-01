@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="de-CH">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ currentSite.name }}</title>
-  <meta name="author" content="Françoise Nussbaumer">
-  <meta name="description" content="Françoise Nussbaumer ist eine schweizer Malerin. Sie malt Landschaften, Stillleben und ornamentale Sujets mit Ölfarben auf Leinwand.">
-  <link rel="shortcut icon" href="/assets/_pic/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-  
-  <h1>{{ currentSite.name }}</h1>
+{% extends "_layout" %}
 
-</body>
-</html>
+{% block content %}
+  <main>
+    <h2>Homepage</h2>
+    <p>Consectetur odit perspiciatis a molestiae architecto amet Reiciendis quas totam hic voluptatem officia Vel sequi animi cumque quis totam? Consectetur ut obcaecati repellendus mollitia rerum.</p>
+    <img src="{{ alias( '@assetBasePath' ) }}/_pic/test.svg" alt="">
+    <p>Consectetur odit perspiciatis a molestiae architecto amet Reiciendis quas totam hic voluptatem officia Vel sequi animi cumque quis totam? Consectetur ut obcaecati repellendus mollitia rerum.</p>
+  </main>
+{% endblock %}

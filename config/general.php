@@ -26,6 +26,10 @@ return [
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
         'useProjectConfigFile' => false,
+        // Custom Aliases
+        'aliases' => [
+          '@assetBasePath' => 'http://localhost:8000/assets/'
+        ],
     ],
 
     // Dev environment settings
@@ -44,5 +48,9 @@ return [
     'production' => [
         // Set this to `false` to prevent administrative changes from being made on production
         'allowAdminChanges' => true,
+        // Custom Aliases
+        'aliases' => [
+          '@assetBasePath' => 'https://francoisenussbaumer.ch/assets/'
+        ],
     ],
 ];

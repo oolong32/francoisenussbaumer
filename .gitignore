@@ -8,3 +8,8 @@ gulpfile.js
 node_modules/
 package-lock.json
 package.json
+web/assets/fonts/
+.woff
+.woff2
+.otf
+.ttf

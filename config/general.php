@@ -50,7 +50,7 @@ return [
         'allowAdminChanges' => true,
         // Custom Aliases
         'aliases' => [
-          '@assetBasePath' => 'https://francoisenussbaumer.ch/assets/'
+          '@assetBasePath' => 'https://new.francoisenussbaumer.ch/assets/'
         ],
     ],
 ];

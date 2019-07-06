@@ -1,7 +1,16 @@
 {% extends '_layout' %}
 
+{% set myAssetQuery = craft.assets().volume('paintings').kind('image') %}
+{% set paintings = myAssetQuery.all() %}
+
 {% block content %}
-<main>
-<h2>bilder</h2>
-</main>
+  <main>
+
+    <h2>Bilder</h2>
+
+    {% for painting in paintings %}
+      <a href=""><img src="{{ painting.getUrl() }}" alt="{{ painting.title }}"></a>
+    {% endfor %}
+
+  </main>
 {% endblock %}

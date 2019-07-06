@@ -2,7 +2,7 @@
 /.idea
 /vendor
 .DS_Store
-.swp
+**/*.swp
 /uploads
 gulpfile.js
 node_modules/
@@ -13,3 +13,5 @@ web/assets/fonts/
 .woff2
 .otf
 .ttf
+web/assets/general/
+web/assets/paintings/

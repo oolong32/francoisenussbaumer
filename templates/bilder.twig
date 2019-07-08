@@ -9,10 +9,10 @@
 
       <section id="bilder-raster">
         {% if myAssetQuery.all()|length %}
-          {% set paintings = myAssetQuery.all() %}
+        {% set paintings = myAssetQuery.all() %}
           {% for painting in paintings %}
-            <a href="">
-              <img src="{{ painting.getUrl('thumb') }}" alt="{{ painting.title }}">
+            <a href="/painting/{{ painting.id }}/">
+              <img src="/{{ painting.getUrl('thumb') }}" alt="{{ painting.title }}">
             </a>
           {% endfor %}
         {% else %}

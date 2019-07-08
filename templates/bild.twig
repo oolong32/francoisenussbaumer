@@ -1,0 +1,34 @@
+{% extends '_layout' %}
+
+
+{% block content %}
+  <main id="bild">
+
+    {% set painting = craft.assets().volume('paintings').id(assetId).one() %}
+    {% if painting|length %}
+      <h2 class="one-rem-bottom">Bild Nr. {{ painting.title }}</h2>
+      <img src="/{{ painting.getUrl() }}" alt="{{ painting.title }}">
+      <p>{{ painting.picWidth }} × {{ painting.picHeight }}</p>
+      <p>{{ painting.picTechnique }}</p>
+      {# Anzeige d. Kategorie unnötig, oder? #}
+      {% if painting.picType.all()|length %}
+        {% if painting.picType.all()|length == 1 %}
+          {% set picType = painting.picType.one() %}
+          <p>{{ picType.title }}</p> {# ein Link wär schön, what? #}
+        {% else %}
+          {% set picTypes = painting.picType.all() %}
+          <ul>
+          {% for picType in picTypes %}
+            <li>{{ picType.title }}</li> {# ein Link wär schön, what? #}
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% else %}
+        <p>Keine Kategorie für dieses Bild gewählt</p> {# Wording! #}
+      {% endif %}
+    {% else %}
+      <p>Ein Bild mit dieser Id wurde nicht gefunden.</p>
+    {% endif %}
+
+  </main>
+{% endblock %}

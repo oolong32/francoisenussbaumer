@@ -1,3 +1,17 @@
+/* Input Sans Narrow */
+@font-face {
+  font-family: "Input Sans Narrow";
+  src: url("/assets/fonts/input-sans-narrow/InputSansNarrow-Light.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 300; }
+
+/* Domaine Sans Text */
+@font-face {
+  font-family: "Domaine Sans Text";
+  src: url("/assets/fonts/domaine-sans-text/DomaineSansTextTest-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300; }
+
 @font-face {
   font-family: "Domaine Sans Text";
   src: url("/assets/fonts/domaine-sans-text/DomaineSansTextTest-Light.woff") format("woff");

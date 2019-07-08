@@ -11,6 +11,14 @@ return [
       'elementType' => Asset::class,
       'criteria' => ['volume' => 'paintings'],
       'transformer' => function(Asset $asset) {
+        $assetCategories = [];
+        foreach ($asset->picType as $assetCategory) {
+          $assetCategories[] = [
+            'CategoryId' => $assetCategory->id,
+            'CategoryTitle' => $assetCategory->title,
+            'CategoryUrl' => UrlHelper::url("api/category/{$assetCategory->id}.json")
+          ];
+        }
         return [
           'id' => $asset->id,
           'dateCreated' => $asset->dateCreated,
@@ -20,7 +28,7 @@ return [
           'typeId' => $asset->picType->one()->id,
           'imgUrl' => $asset->url,
           'jsonUrl' => UrlHelper::url("api/painting/{$asset->id}.json"),
-          'categoryUrl' => UrlHelper::url("api/category/{$asset->picType->one()->id}.json"),
+          'categories' => $assetCategories,
         ];
       }
     ],
@@ -30,6 +38,14 @@ return [
         'elementType' => Asset::class,
         'criteria' => ['volume' => 'paintings', 'id' => $assetId],
         'transformer' => function(Asset $asset) {
+          $assetCategories = [];
+          foreach ($asset->picType as $assetCategory) {
+            $assetCategories[] = [
+              'CategoryId' => $assetCategory->id,
+              'CategoryTitle' => $assetCategory->title,
+              'CategoryUrl' => UrlHelper::url("api/category/{$assetCategory->id}.json")
+            ];
+          }
           return [
             'id' => $asset->id,
             'filename' => $asset->filename,
@@ -41,7 +57,7 @@ return [
             'type' => $asset->picType->one()->title,
             'typeId' => $asset->picType->one()->id,
             'imgUrl' => $asset->url,
-            'categoryUrl' => UrlHelper::url("api/category/{$asset->picType->one()->id}.json"),
+            'categories' => $assetCategories,
           ];
         }
       ];
@@ -52,6 +68,16 @@ return [
         'elementType' => Asset::class,
         'criteria' => ['volume' => 'paintings', 'relatedTo' => $categoryId],
         'transformer' => function(Asset $asset) {
+          $assetCategories = [];
+          foreach ($asset->picType as $assetCategory) {
+            //if ($assetCategory->id != $categoryId) { // wie würde das gehen?
+              $assetCategories[] = [
+                'CategoryId' => $assetCategory->id,
+                'CategoryTitle' => $assetCategory->title,
+                'CategoryUrl' => UrlHelper::url("api/category/{$assetCategory->id}.json")
+              ];
+            //}
+          }
           return [
             'id' => $asset->id,
             'dateCreated' => $asset->dateCreated,
@@ -60,6 +86,7 @@ return [
             'type' => $asset->picType->one()->title,
             'imgUrl' => $asset->url,
             "jsonUrl" => UrlHelper::url("api/painting/{$asset->id}.json"),
+            'otherCategories' => $assetCategories,
           ];
         } 
       ];

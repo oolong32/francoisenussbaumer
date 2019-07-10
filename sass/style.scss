@@ -26,6 +26,10 @@ main {
   margin: 0 1rem;
 }
 
+.one-rem-bottom {
+  margin: 0 0 1rem;
+}
+
 /* Layout {{{1 */
 
 main#bilder {
@@ -56,9 +60,7 @@ main#bild {
 
 /* Layout }}}1 */
 
-.one-rem-bottom {
-  margin: 0 0 1rem;
-}
+/* Navigation {{{1 */
 
 nav {
   ul {
@@ -69,8 +71,11 @@ nav {
   }
 }
 
+/* Navigation }}}1 */
+
 // font test
-p {
+nav a,
+main a {
   font-family: "Input Sans Narrow";
   font-weight: 300;
 }
@@ -93,6 +98,27 @@ nav ul li {
   a.focus,
   a.hover {
     color: tomato;
+  }
+}
+
+#filter {
+  text-align: center;
+  margin: 2rem 0;
+  h3 {
+    font-weight: 500;
+  }
+  ul li {
+    margin-bottom: .25rem;
+    a,
+    a.link,
+    a.visited {
+      text-decoration: none;
+      color: black;
+    }
+    a.focus,
+    a.hover {
+      color: black;
+    }
   }
 }
 

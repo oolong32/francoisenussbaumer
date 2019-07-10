@@ -2,29 +2,103 @@
 {% extends '_layout' %}
 
 {% set myAssetQuery = craft.assets().volume('paintings').kind('image') %}
+{% set myCategoryQuery = craft.categories() %}
+{% set allCategories = myCategoryQuery.all()  %}
 
 {% block content %}
 
   <main id="bilder">
 
-    <h2 class="one-rem-bottom">Bilder ${ message }</h2>
+    {#<h2 class="one-rem-bottom">Bilder</h2>#}
 
+      {# Filter {{{1 #}
+      {% if allCategories|length > 1 %}
+      <section id="filter">
+        <h3>Filter</h3>
+        <ul>
+          {% for category in allCategories %}
+          <li><a
+            href="/category/{{ category.id }}{# link to category page 👹 for progressive enhancement #}"
+            @click="{{ 'toggle' ~ category }}"
+            :style="{color: {{ category|lower ~ '_visible' }} ? 'black' : 'gray' }"
+            >{{ category }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+      {# Filter }}}1 #}
+
+      {# Bilder Raster {{{1 #}
       <section id="bilder-raster">
         {% if myAssetQuery.all()|length %}
         {% set paintings = myAssetQuery.all() %}
+
+          {# Paintings {{{2  #}
           {% for painting in paintings %}
-            <a href="/painting/{{ painting.id }}/">
-              <img src="/{{ painting.getUrl('thumb') }}" alt="{{ painting.title }}">
-            </a>
+
+            {# Categories List {{{3 #}
+            {% if painting.picType.all()|length %}
+              {% set paintingCategories = painting.picType.all() %}
+              {% set paintingCategoryList = [] %}
+                {% for paintingCategory in paintingCategories %}
+                  {% set paintingCategoryList = paintingCategoryList|merge([paintingCategory|lower]) %}
+                {% endfor %}
+            {% endif %}
+            {# Categories List }}}3 #}
+            
+            {# Values for v-if condition {{{3 #}
+            {% set conditionValues = [] %}
+            {% for value in paintingCategoryList %}
+              {% set valueToAdd = value|lower ~ '_visible' %}
+              {% set conditionValues = conditionValues|merge([valueToAdd]) %}
+            {% endfor %}
+            {# Values for v-if condition }}}3 #}
+
+            {# Image Cell {{{3 #}
+            <div 
+              v-show="{{ conditionValues|join(' && ') }}"
+              class="painting {{ paintingCategoryList|join(' ') }}"
+            >
+              <a href="/painting/{{ painting.id }}/">
+                <img src="/{{ painting.getUrl('thumb') }}" alt="{{ painting.title }}">
+              </a>
+            </div>
+            {# Image Cell }}}3 #}
+
           {% endfor %}
+          {# Paintings }}}2  #}
+
         {% else %}
           <p style="grid-column: 1/-1; text-align: center;">Im Moment gibt es noch keine Bilder.</p>
         {% endif %}
       </section>
+      {# Bilder Raster }}}1 #}
 
   </main>
 
 {% include 'includes/vue-loader' %}
-<script src="/assets/js/vue-bilder.js"></script>
+{#<script src="/assets/js/vue-bilder.js"></script>#}
+<script>
+  var properties = {
+    {% for category in allCategories %}
+    {{ category|lower ~ '_visible' }}: true,
+    {% endfor %}
+  };
+
+  var app = new Vue({
+    el: '#bilder',
+    delimiters: ['${', '}'],
+    data: properties,
+    methods: {
+      {% for category in allCategories %}
+      {{ 'toggle' ~ category }}: function (e) {
+        // don’t follow the link if there is one
+        e.preventDefault();
+        this.{{ category|lower ~ '_visible' }} = this.{{ category|lower ~ '_visible' }} ? false : true;
+      },
+      {% endfor %}
+    }
+  })
+</script>
 
 {% endblock %}

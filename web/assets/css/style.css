@@ -19,6 +19,9 @@ header h1 {
 main {
   margin: 0 1rem; }
 
+.one-rem-bottom {
+  margin: 0 0 1rem; }
+
 /* Layout {{{1 */
 main#bilder {
   width: 100%; }
@@ -41,14 +44,14 @@ main#bild {
     max-width: 100%; }
 
 /* Layout }}}1 */
-.one-rem-bottom {
-  margin: 0 0 1rem; }
-
+/* Navigation {{{1 */
 nav ul li {
   margin: 0 0 0.25rem;
   text-align: center; }
 
-p {
+/* Navigation }}}1 */
+nav a,
+main a {
   font-family: "Input Sans Narrow";
   font-weight: 300; }
 
@@ -66,6 +69,22 @@ nav ul li a.visited {
 nav ul li a.focus,
 nav ul li a.hover {
   color: tomato; }
+
+#filter {
+  text-align: center;
+  margin: 2rem 0; }
+  #filter h3 {
+    font-weight: 500; }
+  #filter ul li {
+    margin-bottom: .25rem; }
+    #filter ul li a,
+    #filter ul li a.link,
+    #filter ul li a.visited {
+      text-decoration: none;
+      color: black; }
+    #filter ul li a.focus,
+    #filter ul li a.hover {
+      color: black; }
 
 /* Links }}}1*/
 /* Desktop {{{1*/

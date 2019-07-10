@@ -43,7 +43,6 @@
                 {% for paintingCategory in paintingCategories %}
                   {% set paintingCategoryList = paintingCategoryList|merge([paintingCategory|lower]) %}
                 {% endfor %}
-            {% endif %}
             {# Categories List }}}3 #}
             
             {# Values for v-if condition {{{3 #}
@@ -57,12 +56,26 @@
             {# Image Cell {{{3 #}
             <div 
               v-show="{{ conditionValues|join(' && ') }}"
+              {# 
+              
+              
+              hier unintuitiv.
+              es sollte entweder überall häckchen haben, die abgewählt werden können,
+
+              oder besser:
+
+              auswahl eines filters muted alle anderen
+              
+              
+              
+              #}
               class="painting {{ paintingCategoryList|join(' ') }}"
             >
               <a href="/painting/{{ painting.id }}/">
                 <img src="/{{ painting.getUrl('thumb') }}" alt="{{ painting.title }}">
               </a>
             </div>
+            {% endif %}
             {# Image Cell }}}3 #}
 
           {% endfor %}

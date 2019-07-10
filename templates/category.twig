@@ -1,0 +1,37 @@
+{# Category Template #}
+{% extends '_layout' %}
+
+{% set myAssetQuery = craft.assets().volume('paintings').kind('image').relatedTo(categoryId) %}
+{% set myCategoryQuery = craft.categories().id(categoryId) %}
+{% set category = myCategoryQuery.one()  %}
+
+{% block content %}
+
+  <main id="bilder">
+
+    <h2 class="one-rem-bottom">{{ category }}</h2>
+
+      <section id="bilder-raster">
+        {% if myAssetQuery.all()|length %}
+        {% set paintings = myAssetQuery.all() %}
+
+          {% for painting in paintings %}
+
+            <!-- start image cell -->
+            <div>
+              <a href="/painting/{{ painting.id }}/">
+                <img src="/{{ painting.getUrl('thumb') }}" alt="{{ painting.title }}">
+              </a>
+            </div> <!-- end image cell -->
+          {% endfor %}
+
+        {% else %}
+          <p style="grid-column: 1/-1; text-align: center;">Zu dieser Kategorie gibt es keine Bilder.</p>
+        {% endif %}
+      </section>
+
+  </main>
+
+</script>
+
+{% endblock %}

@@ -1,3 +1,4 @@
+{% set env = getenv('ENVIRONMENT') %}
 <!DOCTYPE html>
 <html lang="de-CH">
 <head>
@@ -24,5 +25,12 @@
   {% block content %}
   {% endblock %}
 
+  {% if env == 'dev' %}
+    <script src="/assets/js/vue/vue.js"></script>
+    <script>console.log('Environment is ‘{{ env }}’.')</script>
+  {% else %}
+    <script src="/assets/js/vue/vue.min.js"></script>
+  {% endif %}
+  
 </body>
 </html>

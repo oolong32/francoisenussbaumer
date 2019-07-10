@@ -16,5 +16,4 @@ package.json
 /web/assets/general/
 /web/assets/paintings/
 /web/.well-known/
-/vue.js
-web/assets/vue/vue.js
+/web/assets/js/vue/vue.js

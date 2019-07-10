@@ -1,11 +1,13 @@
+{# Bilder Template #}
 {% extends '_layout' %}
 
 {% set myAssetQuery = craft.assets().volume('paintings').kind('image') %}
 
 {% block content %}
+
   <main id="bilder">
 
-    <h2 class="one-rem-bottom">Bilder</h2>
+    <h2 class="one-rem-bottom">Bilder ${ message }</h2>
 
       <section id="bilder-raster">
         {% if myAssetQuery.all()|length %}
@@ -21,4 +23,8 @@
       </section>
 
   </main>
+
+{% include 'includes/vue-loader' %}
+<script src="/assets/js/vue-bilder.js"></script>
+
 {% endblock %}

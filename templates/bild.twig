@@ -7,7 +7,6 @@
     {% set painting = craft.assets().volume('paintings').id(assetId).one() %}
     {% if painting|length %}
       <h2 class="one-rem-bottom">Bild Nr. {{ painting.title }}</h2>
-      <img src="/{{ painting.getUrl() }}" alt="{{ painting.title }}">
       <p>{{ painting.picWidth }} × {{ painting.picHeight }}</p>
       <p>{{ painting.picTechnique }}</p>
       {# Anzeige d. Kategorie unnötig, oder? #}
@@ -26,6 +25,8 @@
       {% else %}
         <p>Keine Kategorie für dieses Bild gewählt</p> {# Wording! #}
       {% endif %}
+      <button>kaufen</button>
+      <img src="/{{ painting.getUrl() }}" alt="{{ painting.title }}">
     {% else %}
       <p>Ein Bild mit dieser Id wurde nicht gefunden.</p>
     {% endif %}

@@ -26,6 +26,8 @@ main {
   margin: 0 1rem;
 }
 
+/* Layout {{{1 */
+
 main#bilder {
   width: 100%;
   h2 { 
@@ -44,6 +46,15 @@ main#bilder {
     }
   }
 }
+
+main#bild {
+  background: palegreen;
+  img {
+      max-width: 100%;
+  }
+}
+
+/* Layout }}}1 */
 
 .one-rem-bottom {
   margin: 0 0 1rem;

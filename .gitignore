@@ -8,11 +8,13 @@ gulpfile.js
 node_modules/
 package-lock.json
 package.json
-web/assets/fonts/
 .woff
 .woff2
 .otf
 .ttf
-web/assets/general/
-web/assets/paintings/
-web/.well-known/
+/web/assets/fonts/
+/web/assets/general/
+/web/assets/paintings/
+/web/.well-known/
+/vue.js
+web/assets/vue/vue.js

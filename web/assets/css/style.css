@@ -19,6 +19,7 @@ header h1 {
 main {
   margin: 0 1rem; }
 
+/* Layout {{{1 */
 main#bilder {
   width: 100%; }
   main#bilder h2 {
@@ -34,6 +35,12 @@ main#bilder {
     main#bilder #bilder-raster img {
       max-width: 100%; }
 
+main#bild {
+  background: palegreen; }
+  main#bild img {
+    max-width: 100%; }
+
+/* Layout }}}1 */
 .one-rem-bottom {
   margin: 0 0 1rem; }
 

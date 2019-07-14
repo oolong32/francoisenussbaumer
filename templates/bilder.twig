@@ -9,18 +9,16 @@
 
   <main id="bilder">
 
-    {#<h2 class="one-rem-bottom">Bilder</h2>#}
-
       {# Filter {{{1 #}
       {% if allCategories|length > 1 %}
       <section id="filter">
-        <h3>Filter</h3>
+       {#  <h3>Filter</h3> #}
         <ul>
           {% for category in allCategories %}
           <li><a
             href="/category/{{ category.id }}{# link to category page 👹 for progressive enhancement #}"
             @click="{{ 'toggle' ~ category }}"
-            :style="{color: {{ category|lower ~ '_visible' }} ? 'black' : 'gray' }"
+            :style="{textDecoration: {{ category|lower ~ '_visible' }} ? 'none' : 'line-through' }"
             >{{ category }}</a></li>
           {% endfor %}
         </ul>
@@ -90,7 +88,6 @@
   </main>
 
 {% include 'includes/vue-loader' %}
-{#<script src="/assets/js/vue-bilder.js"></script>#}
 <script>
   var properties = {
     {% for category in allCategories %}

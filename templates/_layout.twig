@@ -14,14 +14,14 @@
 
 <body>
   
-  <header class="one-rem-bottom">
-    <h1><a href="/">{{ currentSite.name }}</a></h1>
-  </header>
-
-  <nav class="one-rem-bottom">
+  <nav id="navigation">
     {% include 'includes/nav' %}
   </nav>
   
+  <header>
+    <h1><a href="/">{{ currentSite.name }}</a></h1>
+  </header>
+
   {% block content %}
   {% endblock %}
 

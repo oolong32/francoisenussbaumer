@@ -1,10 +1,42 @@
 {% extends "_layout" %}
 
 {% block content %}
-  <main>
-    <h2>Homepage</h2>
-    <p>Consectetur odit perspiciatis a molestiae architecto amet Reiciendis quas totam hic voluptatem officia Vel sequi animi cumque quis totam? Consectetur ut obcaecati repellendus mollitia rerum.</p>
-    <img src="{{ alias( '@assetBasePath' ) }}/_pic/test.svg" alt="">
-    <p>Consectetur odit perspiciatis a molestiae architecto amet Reiciendis quas totam hic voluptatem officia Vel sequi animi cumque quis totam? Consectetur ut obcaecati repellendus mollitia rerum.</p>
+  <main id="index">
+    <p v-if="auction_data && auction_data.status === 'Auktion beendet'">Keine Auktion im Gange.</p>
+    <p v-else-if="auction_data">Momentaner Preis: CHF ${ auction_data.article.start_price }.—</p>
+    <p v-else>Daten werden aufbereitet …</p>
+    <img
+      :src="auction_data ? auction_data.permalink : '{{ alias( '@assetBasePath' ) }}/_pic/test.svg'"
+      :alt="auction_data ? auction_data.article.title : 'Placeholder'"
+      class="one-rem-bottom"
+      >
+    <p v-if="auction_data">${ auction_data.article.title }, ${ auction_data.article.description }.</p>
   </main>
+
+  {% include 'includes/vue-loader' %}
+
+  <script>
+    const url = "https://auction.francoisenussbaumer.ch/json";
+
+    var app = new Vue({
+      el: '#index',
+      delimiters: ['${', '}'],
+
+      data: {
+        auction_data: null
+      },
+
+      created: function () {
+        this.getAuctionData(); 
+      },
+
+      methods: {
+        getAuctionData: async function() { 
+          let response = await fetch(url);
+          this.auction_data = await response.json();
+        }
+      }
+    });
+</script>
+
 {% endblock %}

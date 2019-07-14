@@ -12,12 +12,15 @@ body {
 header, nav, main {
   width: 100%; }
 
-header h1 {
-  font-size: 2rem;
-  text-align: center; }
+header {
+  margin: 5rem auto; }
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1; }
 
 main {
-  margin: 0 1rem; }
+  margin: 0 1rem 5rem; }
 
 .one-rem-bottom {
   margin: 0 0 1rem; }
@@ -38,10 +41,9 @@ main#bilder {
     main#bilder #bilder-raster img {
       max-width: 100%; }
 
-main#bild {
-  background: palegreen; }
-  main#bild img {
-    max-width: 100%; }
+main#index img,
+main#bild img {
+  max-width: 100%; }
 
 /* Layout }}}1 */
 /* Navigation {{{1 */
@@ -70,6 +72,8 @@ nav ul li a.focus,
 nav ul li a.hover {
   color: tomato; }
 
+/* Links }}}1*/
+/* Filter {{{1*/
 #filter {
   text-align: center;
   margin: 2rem 0; }
@@ -86,11 +90,19 @@ nav ul li a.hover {
     #filter ul li a.hover {
       color: black; }
 
-/* Links }}}1*/
+/* Filter }}}1*/
+/* Text Styles {{{1*/
+p {
+  text-align: center;
+  margin: 0 0 1rem; }
+
+/* Text Styles }}}1*/
 /* Desktop {{{1*/
 @media (min-width: 500px) {
+  :root {
+    font-size: 125%; }
   body {
-    padding: 2rem 3rem 4rem; }
+    padding: 1rem 3rem 4rem; }
   main#bilder #bilder-raster {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 3rem; } }

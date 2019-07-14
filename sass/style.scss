@@ -16,14 +16,16 @@ header, nav, main {
 }
 
 header {
+  margin: 5rem auto;
   h1 {
     font-size: 2rem;
     text-align: center;
+    line-height: 1;
   }
 }
 
 main {
-  margin: 0 1rem;
+  margin: 0 1rem 5rem ;
 }
 
 .one-rem-bottom {
@@ -51,8 +53,8 @@ main#bilder {
   }
 }
 
+main#index,
 main#bild {
-  background: palegreen;
   img {
       max-width: 100%;
   }
@@ -100,6 +102,9 @@ nav ul li {
     color: tomato;
   }
 }
+/* Links }}}1*/
+
+/* Filter {{{1*/
 
 #filter {
   text-align: center;
@@ -122,14 +127,22 @@ nav ul li {
   }
 }
 
-/* Links }}}1*/
+/* Filter }}}1*/
+
+/* Text Styles {{{1*/
+p {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+/* Text Styles }}}1*/
 
 
 /* Desktop {{{1*/
 
 @media (min-width: 500px) {
+  :root { font-size: 125%; }
   body {
-    padding: 2rem 3rem 4rem;
+    padding: 1rem 3rem 4rem;
   }
   main#bilder #bilder-raster {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

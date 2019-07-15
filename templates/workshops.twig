@@ -1,0 +1,20 @@
+{# Workshops Template #}
+{% extends '_layout' %}
+
+{% block content %}
+
+  <main id="workshops">
+    <h2>Workshops</h2>
+
+  </main>
+
+{% include 'includes/vue-loader' %}
+<script>
+  var app = new Vue({
+    el: '#workshop',
+    delimiters: ['${', '}'],
+    data: {}
+  })
+</script>
+
+{% endblock %}

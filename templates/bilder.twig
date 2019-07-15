@@ -15,12 +15,16 @@
        <h3 id="filter-title" @click="toggleFilter">Auswahl</h3>
         <ul id="filter-list" v-if="filter_visible">
           {% for category in allCategories %}
-          <li><a
-            href="/category/{{ category.id }}{# link to category page 👹 for progressive enhancement #}"
-            @click="{{ 'toggle' ~ category }}"
-            :style="{textDecoration: {{ category|lower ~ '_visible' }} ? 'none' : 'line-through' }"
+          <li>
+            <a
+              href="/category/{{ category.id }}{# link to category page 👹 for progressive enhancement #}"
+              @click="{{ 'toggle' ~ category }}"
+              :style="{
+                textDecoration: {{ category|lower ~ '_visible' }} ? 'none' : 'line-through',
+                color: {{ category|lower ~ '_visible' }} ? 'black' : 'gray' 
+              }"
             >{{ category }}</a></li>
-          {% endfor %}
+            {% endfor %}
         </ul>
       </section>
       {% endif %}

@@ -12,7 +12,7 @@
       {# Filter {{{1 #}
       {% if allCategories|length > 1 %}
       <section id="filter">
-       <h3 id="filter-title" @click="toggleFilter">Auswahl</h3>
+       <h3 id="filter-title" @click="toggleFilter">Auswahl einschränken</h3>
         <ul id="filter-list" v-if="filter_visible">
           {% for category in allCategories %}
           <li>

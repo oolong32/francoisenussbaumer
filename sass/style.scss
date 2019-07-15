@@ -1,5 +1,5 @@
 :root {
-  font-size: 150%;
+  font-size: 100%;
   font-family: "Domaine Sans Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
 }
@@ -13,21 +13,19 @@ body {
   padding: 2rem 0.5rem 4rem;
 }
 
+// .one-rem-bottom {
+//   margin: 0 0 1rem;
+// }
+
+/* Layout {{{1 */
+
 header, nav, main { 
   width: 100%;
 }
 
-header { margin: 5rem auto; }
+header { margin: 3rem auto; }
 
-main {
-  margin: 0 1rem 5rem ;
-}
-
-.one-rem-bottom {
-  margin: 0 0 1rem;
-}
-
-/* Layout {{{1 */
+main { margin: 0 1rem 5rem ; }
 
 main#bilder {
   width: 100%;
@@ -42,9 +40,7 @@ main#bilder {
     grid-gap: 1.5rem .5rem ;
     align-items: center;
     justify-items: center;
-    img {
-      max-width: 100%;
-    }
+    img { max-width: 100%; }
   }
 }
 
@@ -64,6 +60,7 @@ nav {
   ul {
     display: flex;
     justify-content: center;
+    justify-content: space-between;
     li {
       margin: 0 0 0.25rem;
       text-align: center;
@@ -108,7 +105,7 @@ nav ul li {
   margin: 2rem 0;
   h3#filter-title { cursor: pointer; }
   ul li {
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
     a,
     a.link,
     a.visited {
@@ -126,7 +123,8 @@ nav ul li {
 
 /* Text Styles {{{1*/
 h1 {
-  font-size: 2rem;
+  font-variant-caps: small-caps;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
@@ -140,6 +138,7 @@ nav, #filter {
   font-size: 1rem;
   font-family: "Input Sans Narrow", monospace;
   font-weight: 300;
+  h3 { font-weight: 300; }
 }
 
 /* Text Styles }}}1*/
@@ -148,7 +147,7 @@ nav, #filter {
 /* Desktop {{{1*/
 
 @media (min-width: 500px) {
-  :root { font-size: 125%; }
+  :root { font-size: 100%; }
   body {
     padding: 1rem 3rem 4rem;
   }
@@ -157,10 +156,15 @@ nav, #filter {
     grid-gap: 3rem;
   }
 
+  /* Desktop Nav {{{2*/
+  nav ul { justify-content: center; }
+  /* Desktop Nav }}}2*/
+
   /* Desktop Text Styles {{{2*/
-  nav, #filter {
-    font-size: 0.75rem;
+  h1 {
+    font-size: 1.25rem;
   }
+  nav, #filter { font-size: 0.9rem; }
   /* Desktop Text Styles }}}2*/
 }
 

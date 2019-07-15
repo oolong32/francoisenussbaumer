@@ -75,6 +75,8 @@ nav ul li a.hover {
 #filter {
   text-align: center;
   margin: 2rem 0; }
+  #filter h3#filter-title {
+    cursor: pointer; }
   #filter ul li {
     margin-bottom: .25rem; }
     #filter ul li a,

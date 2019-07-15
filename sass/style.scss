@@ -106,6 +106,7 @@ nav ul li {
 #filter {
   text-align: center;
   margin: 2rem 0;
+  h3#filter-title { cursor: pointer; }
   ul li {
     margin-bottom: .25rem;
     a,

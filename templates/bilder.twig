@@ -12,8 +12,8 @@
       {# Filter {{{1 #}
       {% if allCategories|length > 1 %}
       <section id="filter">
-       {#  <h3>Filter</h3> #}
-        <ul>
+       <h3 id="filter-title" @click="toggleFilter">Filter</h3>
+        <ul id="filter-list" v-if="filter_visible">
           {% for category in allCategories %}
           <li><a
             href="/category/{{ category.id }}{# link to category page 👹 for progressive enhancement #}"
@@ -90,6 +90,7 @@
 {% include 'includes/vue-loader' %}
 <script>
   var properties = {
+    filter_visible: false,
     {% for category in allCategories %}
     {{ category|lower ~ '_visible' }}: true,
     {% endfor %}
@@ -100,6 +101,9 @@
     delimiters: ['${', '}'],
     data: properties,
     methods: {
+      toggleFilter: function() {
+        this.filter_visible = this.filter_visible ? false : true;
+      },
       {% for category in allCategories %}
       {{ 'toggle' ~ category }}: function (e) {
         // don’t follow the link if there is one

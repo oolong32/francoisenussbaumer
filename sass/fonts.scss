@@ -1,15 +1,6 @@
-/* Input Sans Narrow */
-
-@font-face {
-  font-family: "Input Sans Narrow";
-  src: url("/assets/fonts/input-sans-narrow/InputSansNarrow-Light.ttf") format("ttf");
-  font-style: normal;
-  font-weight: 300;
-}
-
 /* Domaine Sans Web */
 @font-face {
-  font-family: "Domaine Sans";
+  font-family: "Domaine Sans Text";
   src: url("../fonts/domaine-sans-text/DomaineSansTextWeb-Light.woff2") format("woff2"),
        url("../fonts/domaine-sans-text/DomaineSansTextWeb-Light.woff2") format("woff2"),
        url("../fonts/domaine-sans-text/DomaineSansTextWeb-Light.eot") format("eot");
@@ -18,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Domaine Sans";
+  font-family: "Domaine Sans Text";
   src: url("/assets/fonts/domaine-sans-text/DomaineSansTextWeb-LightItalic.woff2") format("woff2"),
        url("/assets/fonts/domaine-sans-text/DomaineSansTextWeb-LightItalic.woff2") format("woff2"),
        url("/assets/fonts/domaine-sans-text/DomaineSansTextWeb-LightItalic.eot") format("eot");
@@ -27,10 +18,19 @@
 }
 
 @font-face {
-  font-family: "Domaine Sans";
+  font-family: "Domaine Sans Text";
   src: url("/assets/fonts/domaine-sans-text/DomaineSansTextWeb-Medium.woff2") format("woff2"),
        url("/assets/fonts/domaine-sans-text/DomaineSansTextWeb-Medium.woff2") format("woff2"),
        url("/assets/fonts/domaine-sans-text/DomaineSansTextWeb-Medium.eot") format("eot");
   font-style: normal;
   font-weight: 500;
+}
+
+/* Input Sans Narrow */
+
+@font-face {
+  font-family: "Input Sans Narrow";
+  src: url("/assets/fonts/input-sans-narrow/InputSansNarrow-Light.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 300;
 }

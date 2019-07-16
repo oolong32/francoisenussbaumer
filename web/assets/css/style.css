@@ -1,5 +1,7 @@
+@charset "UTF-8";
 :root {
   font-size: 100%;
+  line-height: 1.2;
   font-family: "Domaine Sans Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
   font-variant-numeric: oldstyle-nums; }
@@ -44,15 +46,22 @@ main#bild img {
   max-width: 100%;
   margin-bottom: 1rem; }
 
+main#workshops #description {
+  background: #b5c9f7;
+  padding: 1.25rem 1rem;
+  text-align: left; }
+  main#workshops #description p {
+    hyphens: auto; }
+
 /* Layout }}}1 */
 /* Navigation {{{1 */
 nav ul {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  justify-content: space-between; }
-  nav ul li {
-    margin: 0 0 0.25rem;
-    text-align: center; }
+  justify-content: space-between;
+  list-style: none; }
 
 /* Navigation }}}1 */
 /* Links {{{1*/
@@ -79,10 +88,10 @@ nav ul li a.hover {
     cursor: pointer;
     margin-bottom: .5rem; }
   #filter ul {
+    display: inline-block;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: .5rem 2rem;
-    display: inline-block; }
+    padding: .5rem 2rem .1rem; }
     #filter ul li {
       margin-bottom: .5rem; }
       #filter ul li a,
@@ -104,8 +113,11 @@ h1 {
   font-size: 1.5rem;
   line-height: 1; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, strong {
   font-weight: 500; }
+
+strong em, em strong {
+  font-style: normal; }
 
 p, li, figcaption {
   font-weight: 300; }
@@ -121,6 +133,35 @@ nav, #filter {
     font-weight: 300; }
 
 /* Text Styles }}}1*/
+/* Lists {{{1*/
+main ul {
+  margin: 0 0 1rem;
+  padding-left: .3rem; }
+  main ul li {
+    padding-left: 0.3rem; }
+  main ul li::marker {
+    content: "· ";
+    padding-right: 0.2rem; }
+
+/* Lists }}}1*/
+/* Buttons {{{1*/
+p.button {
+  display: inline-block;
+  background: black;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  padding: .5rem 1rem;
+  text-align: center;
+  cursor: pointer; }
+  p.button a {
+    text-decoration: none;
+    color: white;
+    font-family: "Input Sans Narrow", monospace; }
+
+p.button:hover {
+  background: deeppink; }
+
+/* Buttons }}}1*/
 /* Desktop {{{1*/
 @media (min-width: 500px) {
   :root {

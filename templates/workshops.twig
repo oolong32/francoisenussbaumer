@@ -2,9 +2,17 @@
 {% extends '_layout' %}
 
 {% block content %}
-
+  {% set entry = craft.entries().section('Workshops').one() %}
   <main id="workshops">
-    <h2>Workshops</h2>
+    {# <h2>Workshops</h2> #}
+    
+    <section id="description">
+    <h3>{{ entry.title }}</h3>
+    {{ entry.text }}
+    <div style="display: flex">
+      <p class="button"><a href="mailto:mail@francoisenussbaumer.ch">Anmelden</a></p>
+    </div>
+    </section>
 
   </main>
 

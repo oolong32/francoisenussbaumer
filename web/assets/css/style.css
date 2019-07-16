@@ -52,8 +52,7 @@ nav ul {
   justify-content: space-between; }
   nav ul li {
     margin: 0 0 0.25rem;
-    text-align: center;
-    margin: 0 1rem; }
+    text-align: center; }
 
 /* Navigation }}}1 */
 /* Links {{{1*/
@@ -77,34 +76,41 @@ nav ul li a.hover {
   text-align: center;
   margin: 0 0 1rem; }
   #filter h3#filter-title {
-    cursor: pointer; }
-  #filter ul li {
+    cursor: pointer;
     margin-bottom: .5rem; }
-    #filter ul li a,
-    #filter ul li a.link,
-    #filter ul li a.visited {
-      text-decoration: none;
-      color: black; }
-    #filter ul li a.focus,
-    #filter ul li a.hover {
-      color: black; }
-    #filter ul li a.inactive {
-      color: tomato; }
+  #filter ul {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: .5rem 2rem;
+    display: inline-block; }
+    #filter ul li {
+      margin-bottom: .5rem; }
+      #filter ul li a,
+      #filter ul li a.link,
+      #filter ul li a.visited {
+        font-family: 'Domaine Sans Text';
+        text-decoration: none;
+        color: black; }
+      #filter ul li a.focus,
+      #filter ul li a.hover {
+        color: black; }
+      #filter ul li a.inactive {
+        color: tomato; }
 
 /* Filter }}}1*/
 /* Text Styles {{{1*/
 h1 {
-  font-variant-caps: small-caps;
+  font-variant-caps: all-small-caps;
   font-size: 1.5rem;
   line-height: 1; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
-p, li {
+p, li, figcaption {
   font-weight: 300; }
 
-h2, h3, h4, h5, p {
+h2, h3, h4, h5, p, figcaption {
   margin: 0 0 1rem; }
 
 nav, #filter {
@@ -127,6 +133,8 @@ nav, #filter {
   /* Desktop Nav {{{2*/
   nav ul {
     justify-content: center; }
+    nav ul li {
+      margin: 0 1rem; }
   /* Desktop Nav }}}2*/
   /* Desktop Text Styles {{{2*/
   h1 {

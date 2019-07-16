@@ -7,10 +7,11 @@
 
     {% set painting = craft.assets().volume('paintings').id(assetId).one() %}
     {% if painting|length %}
-      <h2>{{ painting.title }}, {{ painting.picTechnique }}, {{ painting.picWidth }} × {{ painting.picHeight }} cm</h2>
+      <figure>
+        <figcaption>{{ painting.title }}, {{ painting.picTechnique }}, {{ painting.picWidth }} × {{ painting.picHeight }} cm</figcaption>
 
-      <img src="/{{ painting.getUrl() }}" alt="{{ painting.title }}">
-
+        <img src="/{{ painting.getUrl() }}" alt="{{ painting.title }}"> 
+      </figure>
       <!--
       {# Anzeige d. Kategorie unnötig, oder? #}
       {% if painting.picType.all()|length %}

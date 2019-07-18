@@ -196,6 +196,7 @@ p.button {
     text-decoration: none;
     color: white;
     font-family: "Input Sans Narrow", monospace;
+    font-weight: 300;
   }
 }
 
@@ -206,6 +207,7 @@ p.button:hover {
 a.newsletter-signup {
   display: flex;
   font-family: "Input Sans Narrow", monospace;
+  font-weight: 300;
   text-decoration: none;
   color: black;
   margin: 0 auto 2rem;

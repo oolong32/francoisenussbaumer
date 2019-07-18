@@ -165,6 +165,10 @@ nav, #filter {
   h3 { font-weight: 300; }
 }
 
+.smallcaps {
+  font-variant-caps: all-small-caps;
+}
+
 /* Text Styles }}}1*/
 
 /* Lists {{{1*/
@@ -199,7 +203,64 @@ p.button:hover {
   background: deeppink;
 }
 
+a.newsletter-signup {
+  display: flex;
+  font-family: "Input Sans Narrow", monospace;
+  text-decoration: none;
+  color: black;
+  margin: 0 auto 2rem;
+  border: 1px solid black;
+  width: 9.5rem;
+  height: 9.5rem;
+  border-radius: 4.75rem;
+  transform-origin: center center;
+  transform: rotate(-12deg);
+  transition: all 0.2s ease-in-out;
+  p {
+    transform: translateY(-0.0625rem);
+    display: inline-block;
+    margin: auto;
+  }
+}
+
+a.newsletter-signup:hover {
+  background: hsl(150, 100%, 60%);
+  transform: scale(1.1) rotate(-15deg);
+}
+
+.contact-instagram-link {
+  svg {
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    path {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.contact-instagram-link:hover {
+  svg {
+    transform: scale(1.1);
+    path {
+      fill: hsl(240, 100%, 60%);
+    }
+  } 
+}
+
 /* Buttons }}}1*/
+
+/* Footer {{{1*/
+
+footer {
+  .contact {
+    margin: 4rem auto 3rem;
+    a { text-decoration: none; }
+    a:link, a:visited { color: black; }
+    a:hover, a:focus, a:active { color: cornflowerblue; }
+  }
+}
+
+/* Footer }}}1*/
 
 /* Desktop {{{1*/
 

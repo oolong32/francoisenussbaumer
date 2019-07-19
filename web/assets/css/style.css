@@ -45,12 +45,19 @@ main#bild img {
   max-width: 100%;
   margin-bottom: 1rem; }
 
-main#workshops #description {
-  background: #b5c9f7;
+main#about #content,
+main#workshops #content {
   padding: 1.25rem 1rem;
   text-align: left; }
-  main#workshops #description p {
+  main#about #content p,
+  main#workshops #content p {
     hyphens: auto; }
+
+#about #content {
+  background: #b5c9f7; }
+
+#workshops #content {
+  background: #b5c9f7; }
 
 /* Layout }}}1 */
 /* Navigation {{{1 */
@@ -156,7 +163,8 @@ p.button {
   p.button a {
     text-decoration: none;
     color: white;
-    font-family: "Input Sans Narrow", monospace; }
+    font-family: "Input Sans Narrow", monospace;
+    font-weight: 300; }
 
 p.button:hover {
   background: deeppink; }
@@ -164,6 +172,7 @@ p.button:hover {
 a.newsletter-signup {
   display: flex;
   font-family: "Input Sans Narrow", monospace;
+  font-weight: 300;
   text-decoration: none;
   color: black;
   margin: 0 auto 2rem;

@@ -1,10 +1,32 @@
+{# About Template #}
 {% extends '_layout' %}
 
 {% block content %}
-<main>
-<h2>Über mich</h2>
-</main>
+  {% set entry = craft.entries().section('about').one() %}
+  <main id="about">
+    
+    <section id="content">
+
+      <h3>{{ entry.title }}</h3>
+      {{ entry.text }}
+
+    </section>
+
+  </main>
 
 {% include 'includes/footer' %}
+
+{#
+
+{% include 'includes/vue-loader' %}
+<script>
+  var app = new Vue({
+    el: '#workshop',
+    delimiters: ['${', '}'],
+    data: {}
+  })
+</script>
+
+#}
 
 {% endblock %}

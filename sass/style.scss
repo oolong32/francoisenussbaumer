@@ -55,14 +55,17 @@ main#bild {
   }
 }
 
+main#about,
 main#workshops {
-  #description {
-    background: #b5c9f7;
+  #content {
     padding: 1.25rem 1rem;
     text-align: left;
     p { hyphens: auto; }
   }
 }
+
+#about #content { background: #b5c9f7; }
+#workshops #content { background: #b5c9f7; }
 
 /* Layout }}}1 */
 

@@ -8,6 +8,12 @@
     <section id="content">
 
       <h3>{{ entry.title }}</h3>
+
+      {% set img = entry.img.one() %}
+      {% if img|length %}
+      <img src="img.getUrl()" alt="{{ currentSite.name  }}, {{ entry.title }}">
+      {% endif %}
+
       {{ entry.text }}
 
     </section>

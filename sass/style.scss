@@ -77,8 +77,8 @@ nav {
     padding: 0;
     display: flex;
     justify-content: center;
-    justify-content: space-between;
     list-style: none;
+    li { margin: 0 .5Rem; }
   }
 }
 
@@ -125,7 +125,7 @@ nav ul li {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: .5rem 2rem .1rem;
-
+    list-style: none;
     li {
       margin-bottom: .5rem;
       a,
@@ -283,9 +283,7 @@ footer {
   /* Desktop Nav {{{2*/
   nav ul { 
     justify-content: center;
-    li {
-      margin: 0 1rem;
-    }
+    li { margin: 0 1rem; }
   }
 
   /* Desktop Nav }}}2*/

@@ -66,8 +66,9 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  justify-content: space-between;
   list-style: none; }
+  nav ul li {
+    margin: 0 .5Rem; }
 
 /* Navigation }}}1 */
 /* Links {{{1*/
@@ -97,7 +98,8 @@ nav ul li a.hover {
     display: inline-block;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: .5rem 2rem .1rem; }
+    padding: .5rem 2rem .1rem;
+    list-style: none; }
     #filter ul li {
       margin-bottom: .5rem; }
       #filter ul li a,

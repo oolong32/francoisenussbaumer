@@ -232,7 +232,8 @@ footer .contact {
   nav ul {
     justify-content: center; }
     nav ul li {
-      margin: 0 1rem; }
+      margin: 0 1rem;
+      font-size: 0.667rem; }
   /* Desktop Nav }}}2*/
   /* Desktop Text Styles {{{2*/
   h1 {

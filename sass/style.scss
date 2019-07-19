@@ -283,7 +283,10 @@ footer {
   /* Desktop Nav {{{2*/
   nav ul { 
     justify-content: center;
-    li { margin: 0 1rem; }
+    li { 
+      margin: 0 1rem;
+      font-size: 0.667rem;
+    }
   }
 
   /* Desktop Nav }}}2*/

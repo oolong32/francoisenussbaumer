@@ -105,7 +105,6 @@ nav ul li a.hover {
       #filter ul li a,
       #filter ul li a.link,
       #filter ul li a.visited {
-        font-family: 'Domaine Sans Text';
         text-decoration: none;
         color: black; }
       #filter ul li a.focus,
@@ -235,11 +234,13 @@ footer .contact {
       margin: 0 1rem;
       font-size: 0.667rem; }
   /* Desktop Nav }}}2*/
+  /* Desktop Filter {{{2*/
+  #filter {
+    font-size: 0.667rem; }
+  /* Desktop Filter }}}2*/
   /* Desktop Text Styles {{{2*/
   h1 {
     font-size: 1.5rem; }
-  nav, #filter {
-    font-size: 0.9rem; }
   /* Desktop Text Styles }}}2*/ }
 
 /* Desktop }}}1*/

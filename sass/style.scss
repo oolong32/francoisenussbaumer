@@ -131,7 +131,7 @@ nav ul li {
       a,
       a.link,
       a.visited {
-        font-family: 'Domaine Sans Text';
+        // font-family: 'Domaine Sans Text';
         text-decoration: none;
         color: black;
       }
@@ -281,6 +281,7 @@ footer {
   }
 
   /* Desktop Nav {{{2*/
+
   nav ul { 
     justify-content: center;
     li { 
@@ -291,11 +292,16 @@ footer {
 
   /* Desktop Nav }}}2*/
 
+  /* Desktop Filter {{{2*/
+
+  #filter { font-size: 0.667rem; }
+
+  /* Desktop Filter }}}2*/
+
   /* Desktop Text Styles {{{2*/
   h1 {
     font-size: 1.5rem;
   }
-  nav, #filter { font-size: 0.9rem; }
   /* Desktop Text Styles }}}2*/
 }
 

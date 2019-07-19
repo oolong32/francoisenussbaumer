@@ -2,11 +2,11 @@
 {% extends '_layout' %}
 
 {% block content %}
-  {% set entry = craft.entries().section('Workshops').one() %}
+  {% set entry = craft.entries().section('workshops').one() %}
   <main id="workshops">
     {# <h2>Workshops</h2> #}
     
-    <section id="description">
+    <section id="content">
     <h3>{{ entry.title }}</h3>
     {{ entry.text }}
     <div style="display: flex">
@@ -18,6 +18,8 @@
 
 {% include 'includes/footer' %}
 
+{#
+
 {% include 'includes/vue-loader' %}
 <script>
   var app = new Vue({
@@ -26,5 +28,7 @@
     data: {}
   })
 </script>
+
+#}
 
 {% endblock %}

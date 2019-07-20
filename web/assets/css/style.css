@@ -255,7 +255,7 @@ footer .contact {
     color: cornflowerblue; } }
 
 @media (prefers-color-scheme: dark) {
-  nav, #filter li, #filter h3, p.button, .newsletter-signup {
+  nav li, #filter li, #filter h3, p.button, .newsletter-signup {
     font-weight: 200; }
   body {
     background: #111; }

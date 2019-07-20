@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6, strong { font-weight: 500; }
 
 strong em, em strong { font-style: normal; }
 
-p, li, figcaption { font-weight: 300; }
+p, li, figcaption { font-weight: 300; } // warum? zu ungenau, wegen dark-mode: li muss mal 200 sein dürfen
 
 h2, h3, h4, h5, p, figcaption { margin: 0 0 1rem; }
 
@@ -291,7 +291,7 @@ footer .contact { margin: 4rem auto 3rem; }
 }
 
 @media (prefers-color-scheme: dark) {
-  nav, #filter li, #filter h3, p.button, .newsletter-signup {
+  nav li, #filter li, #filter h3, p.button, .newsletter-signup {
     font-weight: 200;
   }
   body { background: #111; } // ?

@@ -30,6 +30,15 @@
 
 @font-face {
   font-family: "Input Sans Narrow";
+  src: url("/assets/fonts/input-sans-narrow/InputSansNarrow-ExtraLight.woff2") format("woff2"),
+       url("/assets/fonts/input-sans-narrow/InputSansNarrow-ExtraLight.woff") format("woff"),
+       url("/assets/fonts/input-sans-narrow/InputSansNarrow-ExtraLight.eot") format("eot");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Input Sans Narrow";
   src: url("/assets/fonts/input-sans-narrow/InputSansNarrow-Light.woff2") format("woff2"),
        url("/assets/fonts/input-sans-narrow/InputSansNarrow-Light.woff") format("woff"),
        url("/assets/fonts/input-sans-narrow/InputSansNarrow-Light.eot") format("eot");

@@ -291,7 +291,7 @@ footer .contact { margin: 4rem auto 3rem; }
 }
 
 @media (prefers-color-scheme: dark) {
-  #nav, #filter, #filter h3, p.button, .newsletter-signup {
+  nav, #filter li, #filter h3, p.button, .newsletter-signup {
     font-weight: 200;
   }
   body { background: #111; } // ?

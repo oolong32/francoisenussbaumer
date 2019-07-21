@@ -55,7 +55,6 @@ main#workshops img {
 main#about #content,
 main#workshops #content {
   margin: 0 auto;
-  padding: 1.25rem 1rem;
   text-align: left; }
   main#about #content p,
   main#workshops #content p {
@@ -209,101 +208,101 @@ footer .contact {
 
 /* Desktop }}}1*/
 /* Colors {{{1*/
-@media (prefers-color-scheme: light) {
-  body {
-    background: whitesmoke; }
-  #about #content {
-    background: #d6dbf5; }
-  #workshops #content {
-    background: #b3e6cc; }
-  header h1 a {
+body {
+  background: whitesmoke; }
+
+header h1 a {
+  color: black; }
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited {
+  color: black; }
+
+nav ul li a:focus,
+nav ul li a:hover {
+  color: cornflowerblue; }
+
+#filter ul {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+  #filter ul li a,
+  #filter ul li a:link,
+  #filter ul li a:visited {
     color: black; }
-  nav ul li a,
-  nav ul li a:link,
-  nav ul li a:visited {
+  #filter ul li a:focus,
+  #filter ul li a:hover {
     color: black; }
-  nav ul li a:focus,
-  nav ul li a:hover {
-    color: cornflowerblue; }
-  #filter ul {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black; }
-    #filter ul li a,
-    #filter ul li a:link,
-    #filter ul li a:visited {
-      color: black; }
-    #filter ul li a:focus,
-    #filter ul li a:hover {
-      color: black; }
-    #filter ul li a.inactive {
-      color: gray; }
-  p.button {
-    background: black; }
-  p.button a {
-    color: white; }
-  p.button:hover {
-    background: deeppink; }
-  a.newsletter-signup {
-    color: black;
-    border: 1px solid black; }
-  a.newsletter-signup:hover {
-    background: #33ff99; }
-  footer .contact a:link,
-  footer .contact a:visited {
-    color: black; }
-  footer .contact a:hover,
-  footer .contact a:focus,
-  footer .contact a:active {
-    color: cornflowerblue; } }
+  #filter ul li a.inactive {
+    color: gray; }
+
+p.button {
+  background: black; }
+
+p.button a {
+  color: white; }
+
+p.button:hover {
+  background: deeppink; }
+
+a.newsletter-signup {
+  color: black;
+  border: 1px solid black; }
+
+a.newsletter-signup:hover {
+  background: #33ff99; }
+
+footer .contact a:link,
+footer .contact a:visited {
+  color: black; }
+
+footer .contact a:hover,
+footer .contact a:focus,
+footer .contact a:active {
+  color: cornflowerblue; }
 
 @media (prefers-color-scheme: dark) {
   nav li, #filter li, #filter h3, p.button, .newsletter-signup {
     font-weight: 200; }
   body {
     background: #111; }
-  #about #content {
-    background: #262f59;
-    color: white; }
-  #workshops #content {
-    background: #1b3226;
-    color: white; }
   header h1 a {
-    color: white; }
+    color: whitesmoke; }
   nav ul li a,
   nav ul li a:link,
   nav ul li a:visited {
-    color: white; }
+    color: whitesmoke; }
   nav ul li a:focus,
   nav ul li a:hover {
     color: palegreen; }
   #filter h3 {
-    color: white; }
+    color: whitesmoke; }
   #filter ul {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white; }
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke; }
     #filter ul li a,
     #filter ul li a:link,
     #filter ul li a:visited {
-      color: white; }
+      color: whitesmoke; }
     #filter ul li a:focus,
     #filter ul li a:hover {
-      color: white; }
+      color: whitesmoke; }
     #filter ul li a.inactive {
       color: gray; }
   p.button {
-    background: white; }
+    background: whitesmoke; }
   p.button a {
     color: black; }
   p.button:hover {
     background: deeppink; }
   a.newsletter-signup {
-    color: white;
-    border: 1px solid white; }
+    color: whitesmoke;
+    border: 1px solid whitesmoke; }
   a.newsletter-signup:hover {
     background: #26734d; }
   footer .contact a:link,
   footer .contact a:visited {
-    color: white; }
+    color: whitesmoke; }
   footer .contact a:hover,
   footer .contact a:focus,
   footer .contact a:active {

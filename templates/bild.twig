@@ -33,13 +33,11 @@
 
       <p>
 
-        {% set parameter = 'Ich interessiere mich für das Bild «'
-          ~ painting.title
-          ~ '», auf der Seite <'
-          ~ siteUrl
-          ~ '/painting/'
+        {% set parameter = 'Ich interessiere mich für Bild Nr. '
           ~ painting.id
-          ~ '/>.' %}
+          ~ ', «'
+          ~ painting.title
+          ~ '».' %}
 
         <a href="mailto:mail@francoisenussbaumer.ch?subject={{ painting.title|url_encode }}&body={{ parameter|url_encode }}">Ich interessiere mich für dieses Bild</a>
       </p>

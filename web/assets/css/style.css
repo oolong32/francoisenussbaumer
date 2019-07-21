@@ -17,7 +17,9 @@ h1 {
   font-size: 1.25rem;
   line-height: 1; }
 
-nav, #filter {
+nav,
+#filter,
+footer .credits {
   font-size: 0.875rem; }
 
 /* Text Sizes }}}1*/
@@ -73,12 +75,7 @@ nav ul {
 
 /* Navigation }}}1 */
 /* Links {{{1*/
-header h1 a,
-nav ul li a,
-p.button a,
-a.newsletter-signup,
-footer .contact a,
-#filter ul li a {
+a {
   text-decoration: none; }
 
 /* Links }}}1*/
@@ -178,6 +175,12 @@ a.newsletter-signup:hover {
 footer .contact {
   margin: 4rem auto 3rem; }
 
+.contact-instagram-link svg {
+  margin-bottom: 2rem; }
+
+.credits {
+  font-family: 'Input Sans Narrow', monospace; }
+
 /* Footer }}}1*/
 /* Desktop {{{1*/
 @media (min-width: 500px) {
@@ -187,11 +190,12 @@ footer .contact {
   h1 {
     font-size: 1.8rem; }
   nav,
-  #filter {
+  #filter,
+  footer .credits {
     font-size: 0.8rem; }
   /* Desktop Text Sizes }}}2*/
   body {
-    padding: 1rem 3rem 4rem; }
+    padding: 1rem 3rem 3rem; }
   main {
     max-width: 40rem; }
   main #content {
@@ -252,21 +256,26 @@ a.newsletter-signup {
 a.newsletter-signup:hover {
   background: #33ff99; }
 
-footer .contact a:link,
-footer .contact a:visited {
+footer a:link,
+footer a:visited {
   color: black; }
 
-footer .contact a:hover,
-footer .contact a:focus,
-footer .contact a:active {
+footer a:hover,
+footer a:focus,
+footer a:active {
   color: cornflowerblue; }
+
+svg path {
+  fill: black; }
 
 @media (prefers-color-scheme: dark) {
   nav li, #filter li, #filter h3, p.button, .newsletter-signup {
     font-weight: 200; }
   body {
-    background: #111; }
-  header h1 a {
+    background: #111;
+    color: whitesmoke; }
+  header h1 a,
+  p a {
     color: whitesmoke; }
   nav ul li a,
   nav ul li a:link,
@@ -297,15 +306,22 @@ footer .contact a:active {
     background: deeppink; }
   a.newsletter-signup {
     color: whitesmoke;
-    border: 1px solid whitesmoke; }
-  a.newsletter-signup:hover {
+    border: 1px solid #26734d;
     background: #26734d; }
-  footer .contact a:link,
-  footer .contact a:visited {
+  a.newsletter-signup:hover {
+    background: #40bf80;
+    color: black;
+    border: 1px solid #40bf80; }
+  footer a:link,
+  footer a:visited {
     color: whitesmoke; }
-  footer .contact a:hover,
-  footer .contact a:focus,
-  footer .contact a:active {
-    color: cornflowerblue; } }
+  footer a:hover,
+  footer a:focus,
+  footer a:active {
+    color: cornflowerblue; }
+  svg path {
+    fill: whitesmoke; }
+  .contact-instagram-link:hover svg path {
+    fill: #8080ff; } }
 
 /* Colors }}}1*/

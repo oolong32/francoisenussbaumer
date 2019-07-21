@@ -10,7 +10,7 @@
       :alt="auction_data ? auction_data.article.title : 'Placeholder'"
       class="one-rem-bottom"
       >
-    <p v-if="auction_data">${ auction_data.article.title }<br>${ auction_data.article.description }.</p>
+    <p v-if="auction_data"><strong>${ auction_data.article.title }</strong><br>${ auction_data.article.description }.</p>
   </main>
 
   {% include 'includes/footer' %}

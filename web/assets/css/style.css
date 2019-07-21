@@ -138,7 +138,11 @@ p.button {
   margin: 1rem auto;
   padding: .5rem 1rem;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
+
+p.button:hover {
+  transform: scale(1.1); }
 
 a.newsletter-signup {
   font-family: "Input Sans Narrow", monospace;
@@ -167,8 +171,6 @@ a.newsletter-signup:hover {
 
 .contact-instagram-link:hover svg {
   transform: scale(1.1); }
-  .contact-instagram-link:hover svg path {
-    fill: #3333ff; }
 
 /* Buttons }}}1*/
 /* Footer {{{1*/
@@ -215,15 +217,19 @@ footer .contact {
 body {
   background: whitesmoke; }
 
-header h1 a,
-p a {
+header h1 a {
   color: black; }
 
+p a,
+p a:link,
+p a:visited,
 nav ul li a,
 nav ul li a:link,
 nav ul li a:visited {
   color: black; }
 
+p a:focus,
+p a:hover,
 nav ul li a:focus,
 nav ul li a:hover {
   color: cornflowerblue; }
@@ -242,19 +248,21 @@ nav ul li a:hover {
     color: gray; }
 
 p.button {
-  background: black; }
-
-p.button a {
-  color: white; }
+  background: #0bda73; }
+  p.button a {
+    color: black; }
 
 p.button:hover {
-  background: deeppink; }
+  background: #1aff8c; }
+  p.button:hover a {
+    color: black; }
 
 a.newsletter-signup {
   color: black;
   border: 1px solid black; }
 
 a.newsletter-signup:hover {
+  color: black;
   background: #33ff99; }
 
 footer a:link,
@@ -269,22 +277,30 @@ footer a:active {
 svg path {
   fill: black; }
 
+svg:hover path {
+  fill: #8080ff; }
+
+/* dark mode {{{2*/
 @media (prefers-color-scheme: dark) {
   nav li, #filter li, #filter h3, p.button, .newsletter-signup {
     font-weight: 200; }
   body {
     background: #111;
     color: whitesmoke; }
-  header h1 a,
-  p a {
+  header h1 a {
     color: whitesmoke; }
+  p a,
+  p a:link,
+  p a:visited,
   nav ul li a,
   nav ul li a:link,
   nav ul li a:visited {
     color: whitesmoke; }
+  p a:focus,
+  p a:hover,
   nav ul li a:focus,
   nav ul li a:hover {
-    color: palegreen; }
+    color: #9999ff; }
   #filter h3 {
     color: whitesmoke; }
   #filter ul {
@@ -300,29 +316,31 @@ svg path {
     #filter ul li a.inactive {
       color: gray; }
   p.button {
-    background: whitesmoke; }
-  p.button a {
-    color: black; }
+    background: #4040bf; }
+    p.button a {
+      color: whitesmoke; }
   p.button:hover {
-    background: deeppink; }
+    background: #5252e0; }
+    p.button:hover a {
+      color: white; }
   a.newsletter-signup {
     color: whitesmoke;
-    border: 1px solid #26734d;
-    background: #26734d; }
+    background: #4040bf;
+    border: none; }
   a.newsletter-signup:hover {
-    background: #40bf80;
-    color: black;
-    border: 1px solid #40bf80; }
+    background: #5252e0;
+    color: white; }
   footer a:link,
   footer a:visited {
     color: whitesmoke; }
   footer a:hover,
   footer a:focus,
   footer a:active {
-    color: cornflowerblue; }
+    color: #9999ff; }
   svg path {
     fill: whitesmoke; }
   .contact-instagram-link:hover svg path {
     fill: #8080ff; } }
 
+/* dark mode }}}2*/
 /* Colors }}}1*/

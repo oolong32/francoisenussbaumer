@@ -39,9 +39,9 @@
           ~ siteUrl
           ~ '/painting/'
           ~ painting.id
-          ~ '>.' %}
+          ~ '/>.' %}
 
-        <a href="mailto:mail@francoisenussbaumer.ch?subject={{ painting.title|e('html_attr') }}&body={{ parameter|e('html_attr') }}">Ich interessiere mich für dieses Bild</a>
+        <a href="mailto:mail@francoisenussbaumer.ch?subject={{ painting.title|url_encode }}&body={{ parameter|url_encode }}">Ich interessiere mich für dieses Bild</a>
       </p>
 
     {% else %}

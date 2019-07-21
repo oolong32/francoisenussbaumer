@@ -11,7 +11,7 @@
 
       {% set img = entry.img.one() %}
       {% if img|length %}
-      <img src="img.getUrl()" alt="{{ currentSite.name  }}, {{ entry.title }}">
+      <img src="{{ img.getUrl() }}" alt="{{ currentSite.name  }}, {{ entry.title }}">
       {% endif %}
 
       {{ entry.text }}

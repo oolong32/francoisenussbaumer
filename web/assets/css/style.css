@@ -46,7 +46,9 @@ main#bilder {
       max-width: 100%; }
 
 main#index img,
-main#bild img {
+main#bild img,
+main#about img,
+main#workshops img {
   max-width: 100%;
   margin-bottom: 1rem; }
 

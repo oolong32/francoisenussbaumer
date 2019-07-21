@@ -215,7 +215,8 @@ footer .contact {
 body {
   background: whitesmoke; }
 
-header h1 a {
+header h1 a,
+p a {
   color: black; }
 
 nav ul li a,

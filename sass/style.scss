@@ -253,7 +253,8 @@ footer .contact { margin: 4rem auto 3rem; }
 body { background: whitesmoke; }
 // #about #content { background: hsl(230, 60%, 90%); }
 // #workshops #content { background: hsl(150, 50%, 80%); }
-header h1 a { color: black; }
+header h1 a,
+p a { color: black; }
 nav ul li {
   a,
   a:link,

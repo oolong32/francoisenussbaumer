@@ -20,10 +20,7 @@
               href="/category/{{ category.id }}{# link to category page 👹 for progressive enhancement #}"
               @click="{{ 'toggle' ~ category }}"
               :class="{{ category|lower ~ '_visible' }} ? 'active' : 'inactive'"
-              :style="{
-                textDecoration: {{ category|lower ~ '_visible' }} ? 'none' : 'line-through',
-                {#color:  'black' : 'gray' kollidiert#}
-              }"
+              :style="{ textDecoration: {{ category|lower ~ '_visible' }} ? 'none' : 'line-through' }"
             >{{ category }}</a></li>
             {% endfor %}
         </ul>

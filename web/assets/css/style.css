@@ -222,7 +222,7 @@ footer .contact {
     color: black; }
   nav ul li a:focus,
   nav ul li a:hover {
-    color: tomato; }
+    color: cornflowerblue; }
   #filter ul {
     border-top: 1px solid black;
     border-bottom: 1px solid black; }
@@ -234,7 +234,7 @@ footer .contact {
     #filter ul li a:hover {
       color: black; }
     #filter ul li a.inactive {
-      color: tomato; }
+      color: gray; }
   p.button {
     background: black; }
   p.button a {

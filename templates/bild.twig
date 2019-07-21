@@ -33,7 +33,7 @@
 
       <p>
         {% set parameter = 'Ich interessiere mich für das Bild «' ~ painting.title ~ '».' %}
-        <a href="mailto:mail@francoisenussbaumer.ch?subject={{ painting.title|e('url') }}&body={{ parameter|e(url) }}">Ich interessiere mich für dieses Bild</a>
+        <a href="mailto:mail@francoisenussbaumer.ch?subject={{ painting.title|e('url') }}&body={{ parameter|e('url') }}">Ich interessiere mich für dieses Bild</a>
       </p>
       <p>{{ painting.url }}</p>
 

@@ -57,6 +57,7 @@ main#workshops img {
 main#about #content,
 main#workshops #content {
   margin: 0 auto;
+  padding: 0 0.5rem;
   text-align: left; }
   main#about #content p,
   main#workshops #content p {
@@ -201,7 +202,8 @@ footer .contact {
   main {
     max-width: 40rem; }
   main #content {
-    max-width: 32rem; }
+    max-width: 32rem;
+    padding: 0; }
   main#bilder #bilder-raster {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 3rem; }

@@ -19,7 +19,7 @@ h1 {
 
 nav,
 #filter,
-footer .credits {
+footer #credits {
   font-size: 0.875rem; }
 
 /* Text Sizes }}}1*/
@@ -175,13 +175,10 @@ a.newsletter-signup:hover {
 
 /* Buttons }}}1*/
 /* Footer {{{1*/
-footer .contact {
-  margin: 4rem auto 3rem; }
+footer section {
+  margin: 0 auto 5rem; }
 
-.contact-instagram-link svg {
-  margin-bottom: 2rem; }
-
-.credits {
+footer #credits p {
   font-family: 'Input Sans Narrow', monospace; }
 
 /* Footer }}}1*/
@@ -194,14 +191,15 @@ footer .contact {
     font-size: 1.8rem; }
   nav,
   #filter,
-  footer .credits {
+  footer #credits {
     font-size: 0.8rem; }
   /* Desktop Text Sizes }}}2*/
   body {
     padding: 1rem 3rem 3rem; }
   main {
     max-width: 40rem; }
-  main #content {
+  main #content,
+  footer {
     max-width: 32rem;
     padding: 0; }
   main#bilder #bilder-raster {
@@ -261,6 +259,7 @@ p.button:hover {
 
 a.newsletter-signup {
   color: black;
+  background: #5eeda6;
   border: 1px solid black; }
 
 a.newsletter-signup:hover {

@@ -265,6 +265,7 @@ nav ul li {
   a:focus,
   a:hover { color: cornflowerblue; }
 }
+
 #filter ul {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -277,19 +278,23 @@ nav ul li {
     a.inactive { color: gray; }
   }
 }
+
 p.button {
   background: hsl(150, 90%, 45%);
   a { color: black; }
 }
+
 p.button:hover {
   background:  hsl(150, 100%, 55%);
   a { color: black; }
 }
+
 a.newsletter-signup {
   color: black;
   background: hsl(150, 80%, 65%);
-  border: 1px solid black;
+  // border: 1px solid black;
 }
+
 a.newsletter-signup:hover {
   color: black;
   background: hsl(150, 100%, 60%);
@@ -301,7 +306,9 @@ footer {
     a:focus,
     a:active { color: cornflowerblue; }
 }
+
 svg path { fill: black; }
+
 svg:hover path {
   fill: hsl(240, 100%, 75%);
 }

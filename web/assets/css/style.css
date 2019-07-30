@@ -254,12 +254,12 @@ nav ul li a:hover {
     color: gray; }
 
 p.button {
-  background: #0bda73; }
+  background: #5eeda6; }
   p.button a {
     color: black; }
 
 p.button:hover {
-  background: #1aff8c; }
+  background: #33ff99; }
   p.button:hover a {
     color: black; }
 

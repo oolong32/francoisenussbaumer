@@ -5,11 +5,15 @@
     <p v-if="auction_data && auction_data.status === 'Auktion beendet'">Auktion für dieses Bild beendet.</p>
     <p v-else-if="auction_data">Momentaner Preis: CHF ${ auction_data.article.start_price }.—</p>
     <p v-else>Daten werden aufbereitet …</p>
-    <img
-      :src="auction_data ? auction_data.permalink : '{{ alias( '@assetBasePath' ) }}/_pic/test.svg'"
-      :alt="auction_data ? auction_data.article.title : 'Placeholder'"
-      class="one-rem-bottom"
-      >
+    <div id="image-container">
+      <img
+        :src="auction_data ? auction_data.permalink : '{{ alias( '@assetBasePath' ) }}/_pic/test.svg'"
+        :alt="auction_data ? auction_data.article.title : 'Placeholder'"
+        >
+        <p v-if="auction_data && auction_data.article.active" id="auction-button" class="button">
+          <a href="https://auction.francoisenussbaumer.ch/">Bieten</a>
+        </p>
+    </div>
     <p v-if="auction_data"><strong>${ auction_data.article.title }</strong><br>${ auction_data.article.description }.</p>
   </main>
 

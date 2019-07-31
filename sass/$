@@ -164,14 +164,18 @@ main ul {
 
 #image-container {
   position: relative;
+  background: red;
   padding:0;
   p#auction-button {
     position: absolute;
-    transform: rotate(-8deg);
-    bottom: -0.5rem;
-    left: 5%;
+    transform: rotate(-10deg);
+    bottom: 0.25rem;
+    right: 30%;
+    background: black;
+    a {
+      color: whitesmoke;
+    }
   }
-  p#auction-button:hover { transform: rotate(-15deg) scale(1.1); }
 }
 
 p.button {
@@ -299,16 +303,12 @@ nav ul li {
   }
 }
 
-#image-container p#auction-button { background: hsl(220, 40%, 60%); }
-
-p.button,
-#image-container:hover p#auction-button {
+p.button {
   background: hsl(150, 80%, 65%);
   a { color: black; }
 }
 
-p.button:hover,
-#image-container p#auction-button:hover {
+p.button:hover {
   background:  hsl(150, 100%, 60%);
   a { color: black; }
 }
@@ -316,6 +316,7 @@ p.button:hover,
 a.newsletter-signup {
   color: black;
   background: hsl(150, 80%, 65%);
+  // border: 1px solid black;
 }
 
 a.newsletter-signup:hover {
@@ -367,14 +368,11 @@ svg:hover path {
       a.inactive { color: gray; }
     }
   }
-  #image-container p#auction-button { background: hsl(240, 40%, 40%); }
-  p.button,
-  #image-container:hover p#auction-button {
+  p.button {
     background: hsl(240, 50%, 50%);
     a { color: whitesmoke; }
   }
-  p.button:hover,
-  #image-container p#auction-button:hover {
+  p.button:hover {
     background: hsl(240, 70%, 60%);
     a { color: white; } 
   }

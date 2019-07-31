@@ -137,6 +137,17 @@ main ul {
 
 /* Lists }}}1*/
 /* Buttons {{{1*/
+#image-container {
+  position: relative;
+  padding: 0; }
+  #image-container p#auction-button {
+    position: absolute;
+    transform: rotate(-8deg);
+    bottom: -0.5rem;
+    left: 5%; }
+  #image-container p#auction-button:hover {
+    transform: rotate(-15deg) scale(1.1); }
+
 p.button {
   font-family: "Input Sans Narrow", monospace;
   font-weight: 300;
@@ -253,14 +264,21 @@ nav ul li a:hover {
   #filter ul li a.inactive {
     color: gray; }
 
-p.button {
+#image-container p#auction-button {
+  background: #708bc2; }
+
+p.button,
+#image-container:hover p#auction-button {
   background: #5eeda6; }
-  p.button a {
+  p.button a,
+  #image-container:hover p#auction-button a {
     color: black; }
 
-p.button:hover {
+p.button:hover,
+#image-container p#auction-button:hover {
   background: #33ff99; }
-  p.button:hover a {
+  p.button:hover a,
+  #image-container p#auction-button:hover a {
     color: black; }
 
 a.newsletter-signup {
@@ -321,13 +339,19 @@ svg:hover path {
       color: whitesmoke; }
     #filter ul li a.inactive {
       color: gray; }
-  p.button {
+  #image-container p#auction-button {
+    background: #3d3d8f; }
+  p.button,
+  #image-container:hover p#auction-button {
     background: #4040bf; }
-    p.button a {
+    p.button a,
+    #image-container:hover p#auction-button a {
       color: whitesmoke; }
-  p.button:hover {
+  p.button:hover,
+  #image-container p#auction-button:hover {
     background: #5252e0; }
-    p.button:hover a {
+    p.button:hover a,
+    #image-container p#auction-button:hover a {
       color: white; }
   a.newsletter-signup {
     color: whitesmoke;

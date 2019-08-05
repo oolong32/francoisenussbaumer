@@ -22,9 +22,11 @@ h1 {
   line-height: 1; }
 
 nav,
-#filter,
-footer #credits {
+#filter {
   font-size: 0.875rem; }
+
+footer #credits {
+  font-size: 0.6875rem; }
 
 /* Text Sizes }}}1*/
 /* Layout {{{1 */
@@ -306,7 +308,7 @@ svg:hover path {
 
 /* dark mode {{{2*/
 @media (prefers-color-scheme: dark) {
-  nav li, #filter li, #filter h3, p.button, .newsletter-signup {
+  nav li, #filter li, #filter h3, p.button, .newsletter-signup, .credits {
     font-weight: 200; }
   body {
     background: #111;

@@ -82,7 +82,6 @@ main#workshops {
   }
 }
 
-
 /* Layout }}}1 */
 
 /* Navigation {{{1 */
@@ -228,8 +227,10 @@ a.newsletter-signup:hover { transform: scale(1.1) rotate(-15deg); }
 /* Footer {{{1*/
 
 footer section { margin: 0 auto $section-margin; }
+// könnte auch in Layout Fold
 
 footer #credits p { font-family: 'Input Sans Narrow', monospace; }
+// gehört eigentlich in Font Styles Fold
 
 /* Footer }}}1*/
 
@@ -276,7 +277,10 @@ footer #credits p { font-family: 'Input Sans Narrow', monospace; }
 
 /* Colors {{{1*/
 
-body { background: whitesmoke; }
+body { 
+  background: whitesmoke;
+  color: black;
+}
 header h1 a { color: black; }
 p,
 nav ul li {
@@ -323,7 +327,7 @@ a.newsletter-signup:hover {
   color: black;
   background: hsl(150, 100%, 60%);
 }
-footer {
+footer { // redundant?
     a:link,
     a:visited { color: black; }
     a:hover,

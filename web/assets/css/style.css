@@ -234,7 +234,8 @@ footer #credits p {
 /* Desktop }}}1*/
 /* Colors {{{1*/
 body {
-  background: whitesmoke; }
+  background: whitesmoke;
+  color: black; }
 
 header h1 a {
   color: black; }

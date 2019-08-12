@@ -1,10 +1,5 @@
 <footer>
 
-  <section id="newsletter">
-    <p>{{ contact.newsletterSignupText }}</p>
-    <a class="newsletter-signup" href="{{ contact.newsletterSignupLink }}" target="_blank"><p>Newsletter</p></a>
-  </section>
-
   <section id="instagram">
     <p>{{ contact.instagramText }}</p>
     
@@ -19,9 +14,14 @@
     </a>
   </section>
 
+  <section id="newsletter">
+    <p>{{ contact.newsletterSignupText }}</p>
+    <a class="newsletter-signup" href="{{ contact.newsletterSignupLink }}" target="_blank"><p>Newsletter</p></a>
+  </section>
+
   <section id="contact">
     <p>
-      <a class="contact-email" href="mailt:{{ contact.email }}">{{ contact.email }}</a><br>
+      <a class="contact-email" href="mailto:{{ contact.email }}">{{ contact.email }}</a><br>
       <a class="contact-telefon" href="tel:{{ contact.telefon|replace({' ': ''}) }}">{{ contact.telefon }}</a><br>
       <a class="contact-location" href="https://www.google.com/maps/place/{{ contact.latitudeDegrees + contact.latitudeMinutes / 60 + contact.latitudeSeconds / 3600 }},{{ contact.longitudeDegrees + contact.longitudeMinutes / 60 + contact.longitudeSeconds / 3600 }}" target="_blank">{{ contact.latitudeDegrees }}° {{ contact.latitudeMinutes }}' {{ contact.latitudeSeconds }}" <span class="smallcaps">N</span> {{ contact.longitudeDegrees }}° {{ contact.longitudeMinutes }}' {{ contact.longitudeSeconds }}" <span class="smallcaps">E</span></a>
     </p>

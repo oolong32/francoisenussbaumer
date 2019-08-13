@@ -287,15 +287,13 @@ body {
 }
 header h1 a { color: black; }
 p,
-nav ul li {
-
+nav ul li { 
   a,
   a:link,
   a:visited { color: $link-passive; }
 
   a:focus,
-  a:hover { color: $link-active; }
-
+  a:hover { color: $link-active; } 
 }
 
 #filter ul {
@@ -338,9 +336,9 @@ a.newsletter-signup:hover {
 footer {
     a:link,
     a:visited { color: black; }
-    a:hover,
+
     a:focus,
-    a:active { color: cornflowerblue; }
+    a:hover { color: $link-active; }
 }
 
 svg path { fill: black; }
@@ -363,9 +361,9 @@ svg:hover path {
   nav ul li {
     a,
     a:link,
-    a:visited { color: whitesmoke; }
+    a:visited { color: $link-passive-dark; }
     a:focus,
-    a:hover { color: hsl(240, 100%, 80%); }
+    a:hover { color: $link-active-dark; }
   }
   #filter h3 { color: whitesmoke; }
   #filter ul {
@@ -403,9 +401,8 @@ svg:hover path {
   footer {
       a:link,
       a:visited { color: whitesmoke; }
-      a:hover,
       a:focus,
-      a:active { color: hsl(240, 100%, 80%); }
+      a:hover { color: $link-active-dark; }
   }
   svg path { fill: whitesmoke; }
   .contact-instagram-link:hover {

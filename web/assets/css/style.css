@@ -296,10 +296,9 @@ footer a:link,
 footer a:visited {
   color: black; }
 
-footer a:hover,
 footer a:focus,
-footer a:active {
-  color: cornflowerblue; }
+footer a:hover {
+  color: #2b00ff; }
 
 svg path {
   fill: black; }
@@ -322,7 +321,7 @@ svg:hover path {
   nav ul li a,
   nav ul li a:link,
   nav ul li a:visited {
-    color: whitesmoke; }
+    color: #6e6ef7; }
   p a:focus,
   p a:hover,
   nav ul li a:focus,
@@ -366,9 +365,8 @@ svg:hover path {
   footer a:link,
   footer a:visited {
     color: whitesmoke; }
-  footer a:hover,
   footer a:focus,
-  footer a:active {
+  footer a:hover {
     color: #9999ff; }
   svg path {
     fill: whitesmoke; }

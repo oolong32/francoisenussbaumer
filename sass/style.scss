@@ -159,7 +159,10 @@ main ul {
   margin: 0 0 1rem;
   padding-left: 0;
   list-style-position: inside;
-  li {padding-left: 0.3rem;}
+  li {
+    padding-left: 0.8rem;
+    text-indent: -0.9rem;
+  }
 }
 
 /* Lists }}}1*/

@@ -2,6 +2,9 @@
 
 $section-margin: 3rem;
 
+$link-passive: hsl(250, 80%, 60%);
+$link-active: hsl(250, 100%, 50%);
+
 /* End Variables }}}1*/
 
 /* Root/Body {{{1*/
@@ -284,11 +287,14 @@ body {
 header h1 a { color: black; }
 p,
 nav ul li {
+
   a,
   a:link,
-  a:visited { color: black; }
+  a:visited { color: $link-passive; }
+
   a:focus,
-  a:hover { color: cornflowerblue; }
+  a:hover { color: $link-active; }
+
 }
 
 #filter ul {
@@ -327,7 +333,8 @@ a.newsletter-signup:hover {
   color: black;
   background: hsl(150, 100%, 60%);
 }
-footer { // redundant?
+
+footer {
     a:link,
     a:visited { color: black; }
     a:hover,

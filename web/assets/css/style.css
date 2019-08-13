@@ -246,13 +246,13 @@ p a:visited,
 nav ul li a,
 nav ul li a:link,
 nav ul li a:visited {
-  color: black; }
+  color: #6347eb; }
 
 p a:focus,
 p a:hover,
 nav ul li a:focus,
 nav ul li a:hover {
-  color: cornflowerblue; }
+  color: #2b00ff; }
 
 #filter ul {
   border-top: 1px solid black;

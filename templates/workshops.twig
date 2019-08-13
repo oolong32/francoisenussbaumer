@@ -4,20 +4,26 @@
 {% block content %}
   {% set entry = craft.entries().section('workshops').one() %}
   <main id="workshops">
-    {# <h2>Workshops</h2> #}
     
     <section id="content">
-      <h3>{{ entry.title }}</h3>
+      <h3 id="workshop-title">{{ entry.title }}</h3>
+      <p id="workshop-date">{{ entry.date }}</p>
 
       {% set img = entry.img.one() %}
       {% if img|length %}
       <img src="{{ img.getUrl() }}" alt="{{ currentSite.name  }}, {{ entry.title }}">
       {% endif %}
 
-      {{ entry.text }}
+      {{ entry.description }}
 
       <div style="display: flex">
-        <p class="button"><a href="mailto:mail@francoisenussbaumer.ch?subject=Anmeldung">Anmelden</a></p>
+        <p class="button"><a href="{{ entry.registrationLink }} target="_blank"">Anmelden</a></p>
+      </div>
+
+      {{ entry.details }}
+
+      <div style="display: flex">
+        <p class="button"><a href="{{ entry.registrationLink }} target="_blank"">Anmelden</a></p>
       </div>
 
     </section>

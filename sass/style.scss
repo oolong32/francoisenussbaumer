@@ -352,7 +352,7 @@ svg:hover path {
 
 /* dark mode {{{2*/
 @media (prefers-color-scheme: dark) {
-  nav li, #filter li, #filter h3, p.button, .newsletter-signup, .credits {
+  nav li, #filter li, #filter h3, p.button, .newsletter-signup p, .credits {
     font-weight: 200;
   }
   body {

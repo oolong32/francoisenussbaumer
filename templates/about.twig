@@ -4,13 +4,13 @@
 {% block content %}
   {% set entry = craft.entries().section('about').one() %}
   <main id="about">
-    
-    {% set img = entry.img.one() %}
-    {% if img|length %}
-    <img src="{{ img.getUrl() }}" alt="{{ currentSite.name  }}, {{ entry.title }}">
-    {% endif %}
 
     <section id="content">
+
+      {% set img = entry.img.one() %}
+      {% if img|length %}
+      <img src="{{ img.getUrl() }}" alt="{{ currentSite.name  }}, {{ entry.title }}">
+      {% endif %}
 
       {{ entry.text }}
 

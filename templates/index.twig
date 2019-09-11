@@ -3,7 +3,7 @@
 {% block content %}
   <main id="index">
     <p v-if="auction_data && auction_data.status === 'Auktion beendet'">Auktion für dieses Bild beendet.</p>
-    <p v-else-if="auction_data">Momentaner Preis: CHF ${ auction_data.bids|length ? auction_data.article.base_price + 10 : auction_data.article.start_price }.—</p>
+    <!-- <p v-else-if="auction_data">Momentaner Preis: CHF ${ auction_data.bids|length ? auction_data.article.base_price + 10 : auction_data.article.start_price }.—</p> -->
     <p v-else>Daten werden aufbereitet …</p>
     <div id="image-container">
       <img

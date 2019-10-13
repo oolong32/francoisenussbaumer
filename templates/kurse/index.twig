@@ -1,0 +1,26 @@
+{# Workshops Overview Template #}
+{% extends '_layout' %}
+
+{% block content %}
+
+  {% set kurse = craft.entries().section('kurse').all() %}
+
+  <main id="kurs-uebersicht">
+    
+    <h2>Kurse & Workshops</h2>
+    
+    {% for kurs in kurse %}
+
+    <a href="{{ kurs.url }}" title="{{ kurs.title }}">
+      <section class="kurs">
+        <h3 id="workshop-title">{{ kurs.title }}</h3>
+      </section>
+    </a>
+
+    {% endfor %}
+
+  </main>
+
+{% include 'includes/footer' %}
+
+{% endblock %}

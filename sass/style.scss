@@ -86,6 +86,25 @@ main#workshops {
   }
 }
 
+main#kurs-uebersicht {
+  a {
+    border-radius: 0.25rem;
+    min-height: 6rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+  }
+  .kurs {
+    padding: 1.5rem;
+    width: 100%;
+    h3 { 
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
 /* Layout }}}1 */
 
 /* Navigation {{{1 */
@@ -268,6 +287,16 @@ footer #credits p { font-family: 'Input Sans Narrow', monospace; }
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 3rem;
   }
+  main#kurs-uebersicht {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    h2 { grid-column: 1/-1; }
+    .kurs {
+      margin: auto;
+      min-height: auto;
+    }
+  }
 
   /* Desktop Nav {{{2*/
 
@@ -350,6 +379,17 @@ svg:hover path {
   fill: hsl(240, 100%, 75%);
 }
 
+main#kurs-uebersicht {
+  a  { 
+    background: hsl(170, 40%, 75%);
+    h3 { color: black; }
+  }
+  a:hover {
+    background: hsl(170, 50%, 80%);
+    h3 { color: black; }
+  }
+}
+
 /* dark mode {{{2*/
 @media (prefers-color-scheme: dark) {
   nav li, #filter li, #filter h3, p.button, .newsletter-signup p, .credits {
@@ -411,6 +451,16 @@ svg:hover path {
   .contact-instagram-link:hover {
     svg {
       path { fill: hsl(240, 100%, 75%); }
+    }
+  }
+  main#kurs-uebersicht {
+    a  {
+      background: hsl(220, 40%, 25%);
+      h3 { color: whitesmoke; }
+    }
+    a:hover {
+      background: hsl(220, 50%, 30%);
+      h3 { color: white; }
     }
   }
 }

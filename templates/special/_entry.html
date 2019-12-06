@@ -36,7 +36,10 @@
     <main>
 
     <h2>{{ entry.title }}</h2>
+
+    {% if entry.text|length %}
     {{ entry.text }}
+    {% endif %}
 
     <section id="spezial">
     {% set figures = entry.bildText.all() %}
@@ -46,7 +49,9 @@
         {% set caption = figure.caption %}
         <img src="/{{ image.getUrl('medium') }}" alt="{{ caption }}">
 
+        {% if caption|length %}
         <p>{{ caption }}</p>
+        {% endif %}
       </figure>
       {% endfor %}
     </section>

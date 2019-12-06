@@ -1,0 +1,56 @@
+{# Spezial Template: Ad hoc Bilder-Seite #}
+{% set env = getenv('ENVIRONMENT') %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ currentSite.name }}</title>
+  <meta name="author" content="Françoise Nussbaumer">
+  <meta name="description" content="Françoise Nussbaumer ist eine schweizer Malerin. Sie malt Landschaften, Stillleben und ornamentale Sujets mit Ölfarben auf Leinwand.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="/assets/_pic/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    #bilder-raster {
+      grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    }
+    figure p {
+      text-align: left;
+      font-size: 0.875rem;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    
+  </header>
+
+    <main id="spezial">
+
+    <h2>{{ entry.title }}</h2>
+    {{ entry.text }}
+
+    <section id="bilder-raster">
+    {% set figures = entry.bildText.all() %}
+      {% for figure in figures %}
+      <figure>
+        {% set image = figure.bild.one() %}
+        {% set caption = figure.caption %}
+        <img src="/{{ image.getUrl('medium') }}" alt="{{ caption }}">
+
+        <p>{{ caption }}</p>
+      </figure>
+      {% endfor %}
+    </section>
+  </main>
+
+  <footer></footer>
+</body>
+</html>

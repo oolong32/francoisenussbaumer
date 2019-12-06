@@ -34,12 +34,12 @@
     
   </header>
 
-    <main id="spezial">
+    <main>
 
     <h2>{{ entry.title }}</h2>
     {{ entry.text }}
 
-    <section id="bilder-raster">
+    <section id="spezial">
     {% set figures = entry.bildText.all() %}
       {% for figure in figures %}
       <figure>
